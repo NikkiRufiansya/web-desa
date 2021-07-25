@@ -226,6 +226,80 @@
 	});
 
 </script>
+
+
+<!--<script>-->
+<!--	DecoupledEditor-->
+<!--			.create( document.querySelector( '#editor' ) )-->
+<!--			.then( editor => {-->
+<!--				const toolbarContainer = document.querySelector( '#toolbar-container' );-->
+<!---->
+<!--				toolbarContainer.appendChild( editor.ui.view.toolbar.element );-->
+<!--			} )-->
+<!--			.catch( error => {-->
+<!--				console.error( error );-->
+<!--			} );-->
+<!--</script>-->
+
+<script>
+	//CK Editor
+	ClassicEditor.create(document.querySelector('#editor'), {
+		toolbar: {
+			items: [
+				'|',
+				'bold',
+				'alignment',
+				'italic',
+				'link',
+				'bulletedList',
+				'numberedList',
+				'|',
+				'indent',
+				'outdent',
+				'|',
+				'imageUpload',
+				'blockQuote',
+				'insertTable',
+				'mediaEmbed',
+				'undo',
+				'redo',
+				'heading',
+				'exportWord'
+			]
+		},
+		language: 'en-gb',
+		image: {
+			toolbar: [
+				'imageTextAlternative',
+				'imageStyle:full',
+				'imageStyle:side'
+			]
+		},
+		table: {
+			contentToolbar: [
+				'tableColumn',
+				'tableRow',
+				'mergeTableCells'
+			]
+		},
+		licenseKey: '',
+
+	})
+			.then(editor => {
+				window.editor = editor;
+
+			})
+			.catch(error => {
+				console.error('Oops, something went wrong!');
+				console.error(
+						'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:'
+				);
+				console.warn('Build id: gmydwz5beyk7-2lv8cmtrp47i');
+				console.error(error);
+			});
+
+	//End ck editor
+</script>
 </body>
 
 </html>

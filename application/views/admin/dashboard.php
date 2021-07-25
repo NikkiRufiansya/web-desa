@@ -19,42 +19,42 @@
 
 		<!-- Nav Item - Dashboard -->
 		<li class="nav-item active">
-			<a class="nav-link" href="index.html">
+			<a class="nav-link" href="<?php echo base_url('/admin')?>">
 				<i class="fas fa-fw fa-tachometer-alt"></i>
 				<span>Dashboard</span></a>
 		</li>
 
 		<!-- Divider -->
 		<hr class="sidebar-divider">
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo base_url('admin_tentang_desa')?>">
+				<i class="fa fa-info-circle"></i>
+				<span>Tentang Desa</span></a>
+		</li>
 
 
 		<!-- Nav Item - Charts -->
-		<li class="nav-item">
-			<a class="nav-link" href="charts.html">
-				<i class="fa fa-user"></i>
-				<span>Staff</span></a>
-		</li>
 
 		<li class="nav-item">
-			<a class="nav-link" href="charts.html">
+			<a class="nav-link" href="<?php echo base_url('penduduk')?>">
 				<i class="fa fa-users"></i>
 				<span>Data Penduduk</span></a>
 		</li>
 
 		<li class="nav-item">
-			<a class="nav-link" href="charts.html">
+			<a class="nav-link" href="<?php echo base_url('admin_staf_desa')?>">
 				<i class="fas fa-user-friends"></i>
 				<span>Staff Desa</span></a>
 		</li>
 
 		<li class="nav-item">
-			<a class="nav-link" href="charts.html">
+			<a class="nav-link" href="<?php echo base_url('admin_kabar_desa')?>">
 				<i class="fas fa-fw fa-chart-area"></i>
 				<span>Kabar Desa</span></a>
 		</li>
 
 		<li class="nav-item">
-			<a class="nav-link" href="charts.html">
+			<a class="nav-link" href="<?php echo base_url('admin_galeri')?>">
 				<i class="fa fa-camera-retro"></i>
 				<span>Galeri</span></a>
 		</li>
@@ -62,7 +62,7 @@
 		<!-- Divider -->
 		<hr class="sidebar-divider d-none d-md-block">
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo base_url('/logout')?>">
+			<a class="nav-link" href="<?php echo base_url('logout')?>">
 				<i class="fas fa-sign-out-alt"></i>
 				<span>Logout</span></a>
 		</li>
@@ -105,6 +105,24 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="col-xl-3 col-md-6 mb-4">
+						<div class="card border-left-primary shadow h-100 py-2">
+							<div class="card-body">
+								<div class="row no-gutters align-items-center">
+									<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+											Total Balita
+										</div>
+										<?php foreach ($totalAnak as $total): ?>
+											<div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $total->totalAnak ?></div>
+										<?php endforeach ?>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 
 					<!-- Earnings (Monthly) Card Example -->
 					<div class="col-xl-3 col-md-6 mb-4">

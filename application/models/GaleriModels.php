@@ -1,17 +1,7 @@
 <?php
 
-class AdminModels extends CI_Model
+class GaleriModels extends CI_Model
 {
-	public function cek_login($email)
-	{
-		$hasil = $this->db->where('email', $email)->limit(1)->get('admin');
-		if($hasil->num_rows() > 0){
-			return $hasil->row();
-		} else {
-			return array();
-		}
-	}
-
 	public function insert($table, $data)
 	{
 		$query = $this->db->insert($table, $data);
@@ -42,6 +32,4 @@ class AdminModels extends CI_Model
 		$this->db->where($where);
 		$this->db->update($table, $data);
 	}
-
 }
-

@@ -1,17 +1,7 @@
 <?php
 
-class AdminModels extends CI_Model
+class KabarDesaModels extends CI_Model
 {
-	public function cek_login($email)
-	{
-		$hasil = $this->db->where('email', $email)->limit(1)->get('admin');
-		if($hasil->num_rows() > 0){
-			return $hasil->row();
-		} else {
-			return array();
-		}
-	}
-
 	public function insert($table, $data)
 	{
 		$query = $this->db->insert($table, $data);
@@ -20,7 +10,7 @@ class AdminModels extends CI_Model
 
 	public function getAllData($table)
 	{
-		return $this->db->get($table);
+		return $this->db->get($table,3,'DESC');
 	}
 
 	public function delete($table, $where)
@@ -43,5 +33,19 @@ class AdminModels extends CI_Model
 		$this->db->update($table, $data);
 	}
 
-}
+	public function get_all()
+	{
+		$this->db->select('*');
+		$this->db->from('kabar_desa');
+		$this->db->order_by('id', 'DESC');
+		return $this->db->get()->result();
+	}
 
+
+	function get_infromasi_list($limit, $start){
+		$query = $this->db->get('kabar_desa', $limit, $start);
+		return $query;
+	}
+
+
+}

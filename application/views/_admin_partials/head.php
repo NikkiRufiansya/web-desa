@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-	<title>SB Admin 2 - Dashboard</title>
+	<title>Web Desa</title>
 
 	<!-- Custom fonts for this template-->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/admin/vendor/fontawesome-free/css/all.min.css');?>">
@@ -20,6 +20,7 @@
 	<!-- Custom styles for this template-->
 	<link href="<?php echo base_url('/assets/admin/css/sb-admin-2.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('/assets/admin/vendor/datatables/dataTables.bootstrap4.min.css')?>" rel="stylesheet">
+	<script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/classic/ckeditor.js"></script>
 
-
+<!--	<script src="https://cdn.ckeditor.com/ckeditor5/28.0.0/decoupled-document/ckeditor.js"></script>-->
 </head>

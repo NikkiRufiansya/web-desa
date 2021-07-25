@@ -69,20 +69,45 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/php-email-form/validate.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="<?php echo base_url()?>/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+ <!-- Page level plugins -->
+ <script src="<?php echo base_url('/assets/admin/vendor/datatables/jquery.dataTables.min.js') ?>"></script>
+ <script src="<?php echo base_url('/assets/admin/vendor/datatables/dataTables.bootstrap4.min.js') ?>"></script>
+
+ <!-- Page level custom scripts -->
+ <script src="<?php echo base_url('/assets/admin/js/demo/datatables-demo.js') ?>"></script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+ <script !src="">
+	 $(document).ready(function(){
+		 $(".fancybox").fancybox({
+			 openEffect: "none",
+			 closeEffect: "none"
+		 });
+
+		 $(".zoom").hover(function(){
+
+			 $(this).addClass('transition');
+		 }, function(){
+
+			 $(this).removeClass('transition');
+		 });
+	 });
+ </script>
+ </body>
 
 </html>

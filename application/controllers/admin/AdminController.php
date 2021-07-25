@@ -20,6 +20,7 @@ class AdminController extends CI_Controller
 		$penduduk['totalBalita'] = $this->PendudukModels->getTotalBalita()->result();
 		$penduduk['totalDewasa'] = $this->PendudukModels->getTotalDewasa()->result();
 		$penduduk['totalLansia'] = $this->PendudukModels->getTotalLansia()->result();
+		$penduduk['totalAnak'] = $this->PendudukModels->getTotalAnak()->result();
 		$penduduk['penduduk'] = $this->PendudukModels->getAllData('penduduk')->result();
 		$penduduk['gender'] = $this->PendudukModels->getTotalGender()->result();
 		$penduduk['pendidikan'] = $this->PendudukModels->getTotalPendidikan()->result();
