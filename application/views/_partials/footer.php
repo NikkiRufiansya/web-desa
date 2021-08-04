@@ -81,8 +81,8 @@
   <script src="<?php echo base_url()?>/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+<!--  <script src="assets/js/main.js"></script>-->
+ <script src="<?php echo base_url()?>/assets/js/main.js"></script>
  <!-- Page level plugins -->
  <script src="<?php echo base_url('/assets/admin/vendor/datatables/jquery.dataTables.min.js') ?>"></script>
  <script src="<?php echo base_url('/assets/admin/vendor/datatables/dataTables.bootstrap4.min.js') ?>"></script>

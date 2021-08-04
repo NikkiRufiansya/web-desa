@@ -6,9 +6,7 @@ class GaleriController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->library('session');
 		$this->load->model('GaleriModels');
-		$this->cek_login();
 	}
 	public function index()
 	{

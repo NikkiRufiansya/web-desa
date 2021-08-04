@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //route landing page
 $route['default_controller'] = 'HomeController';
 $route['kabar_desa'] = 'KabarDesaController';
-$route['kabar_desa/(num)'] = 'KabarDesaController/$1';
+$route['kabar_desa/(:num)'] = 'KabarDesaController/index/$1';
 $route['baca_informasi'] = 'KabarDesaController/bacaInformasi';
 $route['tentang_desa'] = 'TentangDesaController';
 $route['home_penduduk'] = 'PendudukController';

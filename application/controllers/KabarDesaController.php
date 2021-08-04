@@ -12,8 +12,7 @@ class KabarDesaController extends CI_Controller
 	}
 	public function index()
 	{
-
-		$config['base_url'] = base_url('kabar_desa'); //site url
+		$config['base_url'] = base_url('KabarDesaController/index'); //site url
 		$config['total_rows'] = $this->db->count_all('kabar_desa'); //total row
 		$config['per_page'] = 3;  //show record per halaman
 		$config["uri_segment"] = 3;  // uri parameter
@@ -37,9 +36,8 @@ class KabarDesaController extends CI_Controller
 		$config['first_tagl_close'] = '</span></li>';
 		$config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
 		$config['last_tagl_close']  = '</span></li>';
-
 		$this->pagination->initialize($config);
-		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+		$data['page'] = ($this->uri->segment(1)) ? $this->uri->segment(1) : 0;
 		$data['informasi'] = $this->KabarDesaModels->get_infromasi_list($config["per_page"], $data['page'])->result();
 		$data['pagination'] = $this->pagination->create_links();
 		$this->load->view('_partials/header');

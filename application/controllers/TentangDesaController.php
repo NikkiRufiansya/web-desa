@@ -6,9 +6,8 @@ class TentangDesaController extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->library('session');
 		$this->load->model('TentangDesaModels');
-		$this->cek_login();
+		
 	}
 
 	public function index()
